@@ -25,6 +25,7 @@ html, body {
 table {
     margin: 10px;
     padding: 5px;
+    outline: 1px solid #ffff;
 }
 
 table > tr, td {
