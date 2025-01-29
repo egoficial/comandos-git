@@ -14,7 +14,7 @@ html, body {
     justify-content: center;
 
     text-align: center;
-    height: 100vh;
+    height: auto;
     width: 100vw;
 
     flex-direction: column;
