@@ -1,0 +1,19 @@
+* {
+    font-family: monospace;
+    text-decoration: none;
+    outline: none;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    background-color: #0d1117;
+    color: #ffff;
+}
