@@ -26,3 +26,8 @@ table {
     margin: 10px;
     padding: 5px;
 }
+
+table > tr, td {
+    margin: 10px;
+    padding: 5px;
+}
