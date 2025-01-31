@@ -23,7 +23,7 @@ Lista dos principais comandos do GIT (Ordem Alfabética).
 | `git log`                      | Visualizar o histórico de commits                                            | Mostra o histórico de commits do repositório.                            |
 | `git log --oneline`            | Ver histórico de commits resumido                                            | Exibe o histórico de commits em uma linha por commit.                    |
 | `git merge <branch>`           | Mesclar branches                                                             | Combina as alterações de um branch específico no branch atual.           |
-| `git mv <origem> <destino>`    | Renomear ou mover arquivos                                              | Renomeia ou move arquivos no repositório.                                |
+| `git mv <origem> <destino>`    | Renomear ou mover arquivos                                                   | Renomeia ou move arquivos no repositório.                                |
 | `git pull`                     | Atualizar o repositório local com alterações remotas                         | Busca e integra as alterações do repositório remoto para o local.        |
 | `git push`                     | Enviar commits para o repositório remoto                                     | Envia as alterações locais para o repositório remoto.                    |
 | `git push --tags`              | Enviar tags para o repositório remoto                                        | Envia todas as tags locais para o repositório remoto.                    |
@@ -34,6 +34,7 @@ Lista dos principais comandos do GIT (Ordem Alfabética).
 | `git remote remove <nome>`     | Remover um repositório remoto                                                | Remove um repositório remoto da lista de repositórios.                   |
 | `git reset <arquivo>`          | Remover arquivos da staging area                                             | Retira arquivos da staging area, mas mantém as alterações no diretório.  |
 | `git reset --hard`             | Descartar todas as alterações locais                                         | Descarta todas as alterações não commitadas e reverte para o último commit. |
+| `git restore --staged <file>`  | Remover todos os aquivos marcados para commit                                | Remove todos os arquivos marcados para realizar o próximo commit         |
 | `git revert <commit>`          | Desfazer um commit específico                                                | Cria um novo commit que desfaz as alterações de um commit anterior.      |
 | `git rm <arquivo>`             | Remover arquivos do repositório                                              | Remove arquivos do repositório e do diretório de trabalho.               |
 | `git show <commit>`            | Mostrar detalhes de um commit específico                                     | Exibe informações detalhadas sobre um commit específico.                 |
