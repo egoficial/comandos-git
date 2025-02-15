@@ -36,16 +36,5 @@ Lista dos principais comandos do GIT (Ordem Alfabética).
 | `git reset --hard`             | Descartar todas as alterações locais                                         | Descarta todas as alterações não commitadas e reverte para o último commit. |
 | `git restore --staged <file>`  | Remover todos os aquivos marcados para commit                                | Remove todos os arquivos marcados para realizar o próximo commit         |
 | `git revert <commit>`          | Desfazer um commit específico                                                | Cria um novo commit que desfaz as alterações de um commit anterior.      |
-| `git rm <arquivo>`             | Remover arquivos do repositório                                              | Remove arquivos do repositório e do diretório de trabalho.               |
-| `git show <commit>`            | Mostrar detalhes de um commit específico                                     | Exibe informações detalhadas sobre um commit específico.                 |
-| `git stash`                    | Guardar alterações temporariamente                                           | Armazena alterações não commitadas para uso posterior.                   |
-| `git stash apply`              | Aplicar alterações guardadas sem removê-las da stash                         | Aplica as alterações guardadas, mas mantém-as na stash.                  |
-| `git stash drop`               | Remover alterações guardadas da stash                                        | Remove as alterações guardadas mais recentes da stash.                   |
-| `git stash list`               | Listar alterações guardadas na stash                                         | Mostra todas as alterações armazenadas na stash.                         |
-| `git stash pop`                | Aplicar alterações guardadas e removê-las da stash                           | Aplica as alterações guardadas mais recentes e as remove da stash.       |
 | `git status`                   | Verificar o status do repositório                                            | Mostra o estado atual do diretório de trabalho e da staging area.        |
 | `git tag <nome>`               | Criar uma tag para marcar um ponto específico no histórico                   | Cria uma tag para marcar um commit específico, geralmente para versões.  |
-| `git tag -d <tag>`             | Deletar uma tag local                                                        | Remove uma tag local.                                                    |
-| `git worktree add <caminho>`   | Adicionar uma nova árvore de trabalho                                        | Cria um novo diretório de trabalho vinculado ao repositório.             |
-| `git worktree list`            | Listar árvores de trabalho                                                   | Mostra todas as árvores de trabalho vinculadas ao repositório.           |
-| `git worktree remove <caminho>`| Remover uma árvore de trabalho                                               | Remove uma árvore de trabalho específica.                                |
