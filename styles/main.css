@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #2e5dcc;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f9fa;
+    --border-color: #e1e4e8;
+}
+
+body.dark-mode {
+    --primary-color: #2e7dcc;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #1d1d1d;
+    --border-color: #404040;
+}
+
+/* Estilo para o container do comando */
+.command-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* Estilo para o botão de cópia */
+.copy-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.command-container:hover .copy-button {
+    opacity: 1;
+}
+
+.copy-button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.1);
+}
+
+/* Animação de feedback da cópia */
+.copy-feedback {
+    position: absolute;
+    right: -100px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copy-feedback.show {
+    opacity: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body a {
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+button, select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button:hover, select:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#search-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main {
+    margin: 0 auto;
+    padding: 1rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#content th,
+#content td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#content th {
+    background-color: var(--header-bg);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#content tr:nth-child(even) {
+    background-color: var(--header-bg);
+}
+
+#content tr:hover {
+    background-color: rgba(46, 93, 204, 0.1);
+}
+
+#content td code {
+    display: inline-block;
+    margin: 0.2rem 0;
+}
+
+#content {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#content h1, #content h2, #content h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+#content code {
+    background-color: var(--header-bg);
+    padding: 0.4rem 0.6rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content pre {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content {
+        padding: 1rem;
+    }
+}

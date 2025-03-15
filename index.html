@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/733/733609.png" type="image/x-icon">
-    <title>Renderizar README.md</title>
+    <title>Guia de Comandos Git</title>
 </head>
 <body>
-    <div id="content"></div>
+    <header>
+        <h1>📘 Guia de Comandos Git</h1>
+        <nav>
+            <button id="darkModeToggle">🌙 Modo Escuro</button>
+            <select id="categoryFilter">
+                <option value="all">Todas as categorias</option>
+                <option value="basic">Comandos Básicos</option>
+                <option value="branch">Branches</option>
+                <option value="remote">Repositório Remoto</option>
+            </select>
+        </nav>
+    </header>
+
+    <main>
+        <div id="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar comandos...">
+        </div>
+        <div id="content">Carregando...</div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/egoficial">Eduardo Guilherme</a></p>
+    </footer>
 
     <script>
-        // Carregar o conteúdo do README.md
-        fetch('README.md')
-            .then(response => response.text())
-            .then(data => {
-                // Converter Markdown para HTML
-                const htmlContent = marked.parse(data);
-
-                // Exibir o HTML gerado no elemento com id "content"
-                document.getElementById('content').innerHTML = htmlContent;
-            })
-            .catch(error => console.error('Erro ao carregar o arquivo:', error));
     </script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
