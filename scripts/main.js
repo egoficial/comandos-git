@@ -21,7 +21,7 @@ document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMo
 /**------------------------------------------------------------------------
  *                      CARREGAR E PROCESSAR O README
  *------------------------------------------------------------------------**/
-fetch("./content/README.md")
+fetch("./content/commands.md")
     .then(response => {
         if (!response.ok) throw new Error("Erro ao carregar arquivo");
         return response.text();
