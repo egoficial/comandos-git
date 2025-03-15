@@ -36,7 +36,5 @@ Sinta-se à vontade para contribuir com o projeto! Para isso:
 
 Este projeto está sob a licença MPL-2.0 license. Veja o arquivo `LICENSE` para mais detalhes.
 
----
-
 📢 **Mantenedor:** [EG Oficial](https://github.com/egoficial)  
 💻 **Repositório:** [GitHub](https://github.com/egoficial/comandos-git)
