@@ -21,14 +21,13 @@ document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMo
 /**------------------------------------------------------------------------
  *                      CARREGAR E PROCESSAR O README
  *------------------------------------------------------------------------**/
-// Initial fetch of README content
 fetch("./content/README.md")
     .then(response => {
         if (!response.ok) throw new Error("Erro ao carregar arquivo");
         return response.text();
     })
     .then(data => {
-        markdownContent = data; // Store the content globally
+        markdownContent = data;
         const htmlContent = marked.parse(data, {
             sanitize: true,
             breaks: true
@@ -46,19 +45,39 @@ fetch("./content/README.md")
 document.getElementById("searchInput").addEventListener("input", function(e) {
     const searchTerm = e.target.value.toLowerCase();
     const content = document.getElementById("content");
-    const elements = content.getElementsByTagName("*");
+    const tables = content.getElementsByTagName("table");
 
-    for (let element of elements) {
-        if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) {
-            const text = element.textContent.toLowerCase();
-            element.style.display = text.includes(searchTerm) ? "" : "none";
+    for (let table of tables) {
+        const rows = table.getElementsByTagName("tr");
+        
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const cells = row.getElementsByTagName("td");
+            let shouldShowRow = false;
+
+            for (let cell of cells) {
+                if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                    shouldShowRow = true;
+                    break;
+                }
+            }
+
+            row.style.display = shouldShowRow ? "" : "none";
         }
     }
+
+    const textElements = content.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li");
+    textElements.forEach(element => {
+        const text = element.textContent.toLowerCase();
+        element.style.display = text.includes(searchTerm) ? "" : "none";
+    });
 });
 
 /**------------------------------------------------------------------------
  *                           FILTRAR POR CATEGORIA
  *------------------------------------------------------------------------**/
+
+//todo  Fixar a indexação 
 let markdownContent = "";
 
 function filterContentByCategory(category) {

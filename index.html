@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/733/733609.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Guia de Comandos Git</title>
+    <meta charset="UTF-8">
 </head>
 <body>
     <header>
         <h1>📘 Guia de Comandos Git</h1>
+
         <nav>
             <button id="darkModeToggle">🌙 Modo Escuro</button>
+
             <select id="categoryFilter">
                 <option value="all">Todas as categorias</option>
+                <option value="remote">Repositório Remoto</option>
                 <option value="basic">Comandos Básicos</option>
                 <option value="branch">Branches</option>
-                <option value="remote">Repositório Remoto</option>
             </select>
+
+            <input type="text" id="searchInput" placeholder="Buscar comandos...">
         </nav>
     </header>
 
-    <main>
-        <div id="search-container">
-            <input type="text" id="searchInput" placeholder="Buscar comandos...">
-        </div>
-        <div id="content">Carregando...</div>
-    </main>
+    <main><div id="content">Carregando...</div></main>
 
-    <footer>
-        <p>Desenvolvido por <a href="https://github.com/egoficial">Eduardo Guilherme</a></p>
-    </footer>
+    <footer><p>Desenvolvido por <a href="https://github.com/egoficial">Eduardo Guilherme</a></p></footer>
 
-    <script>
-    </script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>
